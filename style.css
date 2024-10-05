@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    position: relative;
+}
+
+/*? Animazione e posizionamento background___________*/
+section {
+    height: 100vh;
+    transition: 0.8s ease;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+section:hover {
+    transition: 0.8s ease;
+}
+
+#playstation {
+    width: 1400px;
+    background-image: url(img/PlayStation-5-Standard-Edition.png);
+}
+
+
+#xbox {
+    width: 1400px;
+    background-image: url(img/xboxseriesx-1.png);
+    background-position: right;
+    position: absolute;
+    /* transform: translateX(1000px); */
+    transform: translateX(70%);
+
+}
+
+#xbox.buy-ps5 {
+    /* transform: translateX(1400px); */
+    transform: translateX(100%);
+}
+
+
+#xbox:hover {
+    /* transform: translateX(600px); */
+    transform: translateX(45%);
+}
+
+/*? _________________________________________________*/
+
+/*& Overlay__________________________________________*/
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    /*! hai tolto 0.1*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#playstation .overlay {
+    background-color: rgba(93, 101, 211, 0.8);
+}
+
+/*& __________________________________________________*/
+
+/*? Animazione e posizione testo______________________*/
+.console-text {
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    transform: translateX(300px);
+    transition: 0.8s ease;
+
+    text-align: center;
+}
+
+.text-center {
+    /* transform: translateX(500px); */
+    transform: translateX(130%);
+    transition: 0.8s ease;
+}
+
+.text-close {
+    /* transform: translateX(100px); */
+    transform: translateX(25%);
+    transition: 0.8s ease;
+}
+
+/*? __________________________________________________*/
+
+/*& Estetica e hover testo____________________________*/
+h2 {
+    font-size: 60px;
+}
+
+.fake-btn {
+    border: 2px solid white;
+    padding: 25px 0;
+    width: 300px;
+    margin: 70px auto;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#playstation .fake-btn:hover {
+    background-color: rgb(69, 77, 196);
+    border-color: rgb(69, 77, 196);
+    transition: 0.3s;
+}
+
+#xbox .fake-btn:hover {
+    background-color: #9bc848;
+    border-color: #9bc848;
+    transition: 0.3s;
+}
+
+/*& __________________________________________________*/
